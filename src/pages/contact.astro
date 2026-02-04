@@ -1,0 +1,277 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact - Points Beyond">
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>Let's discuss how Points Beyond can help your organization</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="info-card">
+            <h2>Get in Touch</h2>
+            <p>
+              Interested in learning how Points Beyond can help transform your organization's
+              IT strategy and operations? I'd welcome the opportunity to discuss your specific
+              challenges and objectives.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div class="method-content">
+                  <h3>LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/johnhwhitlock/" target="_blank" rel="noopener noreferrer">
+                    Connect with John Whitlock
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="method-content">
+                  <h3>Location</h3>
+                  <p>Fairfax County, Virginia</p>
+                  <p class="note">Serving federal agencies and organizations in the Washington, D.C. metropolitan area</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-summary">
+          <div class="summary-card">
+            <h3>How I Can Help</h3>
+            <ul>
+              <li>Enterprise architecture assessment and planning</li>
+              <li>IT strategy development and alignment</li>
+              <li>Business analytics and data-driven decision support</li>
+              <li>Process improvement and operational optimization</li>
+              <li>Program and portfolio management</li>
+            </ul>
+            <a href="/points-beyond/services/" class="services-link">
+              View All Services
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, #e2e8f0 0%, #a78bfa 50%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .page-header p {
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    position: relative;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .contact {
+    padding: 4rem 2rem;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .info-card, .summary-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 100%;
+  }
+
+  .info-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+
+  .info-card > p {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-method {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .method-icon {
+    color: var(--color-primary-light);
+    flex-shrink: 0;
+    padding: 0.75rem;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 12px;
+  }
+
+  .method-content h3 {
+    color: var(--color-text);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .method-content p {
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .method-content a {
+    color: var(--color-primary-light);
+    font-weight: 500;
+  }
+
+  .method-content a:hover {
+    color: var(--color-primary);
+  }
+
+  .method-content .note {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+
+  .summary-card h3 {
+    color: var(--color-text);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .summary-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  .summary-card li {
+    padding: 0.75rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-card-border);
+  }
+
+  .summary-card li:last-child {
+    border-bottom: none;
+  }
+
+  .summary-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-light);
+  }
+
+  .services-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary-light);
+    font-weight: 600;
+    transition: gap 0.2s ease;
+  }
+
+  .services-link:hover {
+    gap: 0.75rem;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 4rem 1.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .contact {
+      padding: 3rem 1.5rem;
+    }
+
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+
+    .info-card, .summary-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .info-card h2 {
+      font-size: 1.5rem;
+    }
+
+    .summary-card h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-method {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .services-link {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

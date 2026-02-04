@@ -1,0 +1,415 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Points Beyond - AI Automation Consultant">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-title">
+        <img src="/points-beyond/logo.png" alt="Points Beyond logo" class="hero-logo" />
+        <h1>Points Beyond</h1>
+      </div>
+      <p class="tagline">AI Automation Consultant</p>
+      <p class="subtitle">Helping businesses create high-volume, brand-aligned content optimized for the AI search era</p>
+      <a href="/points-beyond/contact/" class="cta">Get in Touch</a>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="container">
+      <h2>Content That Speaks to AI and Humans</h2>
+      <p>
+        The way people find information is changing. AI-powered search engines, voice assistants, and answer engines
+        are reshaping how your audience discovers your brand. Points Beyond helps businesses create scalable content
+        strategies that maintain authentic brand voice while ensuring visibility in AI-generated search results.
+      </p>
+    </div>
+  </section>
+
+  <section class="strengths">
+    <div class="container">
+      <div class="strengths-grid">
+        <div class="strength-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+          </div>
+          <h3>Answer Engine Optimization</h3>
+          <p>Position your content to be the definitive answer when AI systems like ChatGPT, Perplexity, and Google AI Overview respond to user queries. We structure content for direct, authoritative responses.</p>
+        </div>
+        <div class="strength-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Search Engine Optimization</h3>
+          <p>Traditional SEO remains critical. We combine proven optimization techniques with AI-era strategies to ensure your content ranks in both conventional search results and AI-curated responses.</p>
+        </div>
+        <div class="strength-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+          </div>
+          <h3>Voice AI Optimization</h3>
+          <p>Alexa, Siri, and Google Assistant are how millions access information daily. We optimize your content for natural language queries and voice-first interactions to capture this growing audience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="voice-receptionist">
+    <div class="container">
+      <div class="receptionist-card">
+        <div class="receptionist-header">
+          <div class="receptionist-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="receptionist-title">
+            <h2>AI Voice Receptionist</h2>
+            <p class="receptionist-intro">
+              Never miss a call again. Our AI Voice Receptionist answers 24/7, books appointments, and handles FAQs—so you can focus on your business.
+            </p>
+          </div>
+        </div>
+        <ul class="receptionist-features">
+          <li>Automatically book, reschedule, and confirm appointments with real-time calendar sync</li>
+          <li>Answer common questions about hours, services, pricing, and policies instantly</li>
+          <li>Natural conversations that handle interruptions and complex requests</li>
+          <li>24/7 availability with zero hold time—100% of calls answered</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Ready for the AI Search Era?</h2>
+        <p>Let's discuss how Points Beyond can help your business thrive when AI is the gatekeeper to your audience.</p>
+        <a href="/points-beyond/contact/" class="cta">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-logo {
+    height: 80px;
+    width: auto;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #e2e8f0 0%, #a78bfa 50%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    color: var(--color-primary-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .intro {
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  /* Strengths Section */
+  .strengths {
+    padding: 4rem 2rem;
+  }
+
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .strength-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .strength-card:hover {
+    transform: translateY(-4px);
+    background: var(--color-card-hover);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+  }
+
+  .card-icon {
+    color: var(--color-primary-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .strength-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .strength-card p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  /* Voice Receptionist Section */
+  .voice-receptionist {
+    padding: 6rem 2rem;
+  }
+
+  .receptionist-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .receptionist-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .receptionist-icon {
+    color: var(--color-primary-light);
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+  }
+
+  .receptionist-title h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+
+  .receptionist-intro {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .receptionist-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    margin-left: 2.75rem;
+  }
+
+  .receptionist-features li {
+    color: var(--color-text);
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .receptionist-features li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-light);
+  }
+
+  .cta-section {
+    padding: 5rem 2rem;
+  }
+
+  .cta-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 24px;
+    padding: 4rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-card p {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 5rem 1.5rem;
+    }
+
+    .hero-title {
+      gap: 0.75rem;
+    }
+
+    .hero-logo {
+      height: 55px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .intro {
+      padding: 3rem 1.5rem;
+    }
+
+    .intro h2 {
+      font-size: 1.5rem;
+    }
+
+    .strengths {
+      padding: 3rem 1.5rem;
+    }
+
+    .strengths-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .receptionist-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .receptionist-features {
+      margin-left: 0;
+      grid-template-columns: 1fr;
+    }
+
+    .voice-receptionist {
+      padding: 4rem 1.5rem;
+    }
+
+    .cta-section {
+      padding: 3rem 1.5rem;
+    }
+
+    .cta-card {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .cta-card h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-logo {
+      height: 40px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .cta {
+      padding: 0.875rem 2rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

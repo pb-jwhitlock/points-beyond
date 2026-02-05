@@ -4,14 +4,36 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Points Beyond - AI Automation Consultant">
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-title">
-        <img src="/points-beyond/logo.png" alt="Points Beyond logo" class="hero-logo" />
-        <h1>Points Beyond</h1>
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <div class="hero-title">
+          <img src="/points-beyond/logo.png" alt="Points Beyond logo" class="hero-logo" />
+          <h1>Points Beyond</h1>
+        </div>
+        <p class="tagline">AI Automation Consultant</p>
+        <p class="subtitle">Helping businesses create high-volume, brand-aligned content optimized for the AI search era</p>
+        <a href="/points-beyond/contact/" class="cta">Get in Touch</a>
       </div>
-      <p class="tagline">AI Automation Consultant</p>
-      <p class="subtitle">Helping businesses create high-volume, brand-aligned content optimized for the AI search era</p>
-      <a href="/points-beyond/contact/" class="cta">Get in Touch</a>
+      <div class="hero-form">
+        <div class="form-card">
+          <h3>Get My Free Proposal</h3>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="url" name="website" placeholder="Website URL" />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Phone Number" />
+            </div>
+            <button type="submit" class="form-submit">Get My Free Proposal</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -91,8 +113,7 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .hero {
-    padding: 8rem 2rem;
-    text-align: center;
+    padding: 6rem 2rem;
     position: relative;
     overflow: hidden;
   }
@@ -108,19 +129,91 @@ import Layout from '../layouts/Layout.astro';
     pointer-events: none;
   }
 
-  .hero-content {
-    max-width: 800px;
+  .hero-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: center;
     position: relative;
     z-index: 1;
+  }
+
+  .hero-content {
+    text-align: left;
   }
 
   .hero-title {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
     margin-bottom: 0.5rem;
+  }
+
+  /* Hero Form */
+  .hero-form {
+    position: relative;
+  }
+
+  .form-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .form-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--color-text);
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--color-card-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .form-group input::placeholder {
+    color: var(--color-text-dim);
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
   }
 
   .hero-logo {
@@ -329,9 +422,30 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.1rem;
   }
 
+  @media (max-width: 900px) {
+    .hero-wrapper {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-title {
+      justify-content: center;
+    }
+
+    .hero-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
   @media (max-width: 768px) {
     .hero {
-      padding: 5rem 1.5rem;
+      padding: 4rem 1.5rem;
     }
 
     .hero-title {
@@ -352,6 +466,14 @@ import Layout from '../layouts/Layout.astro';
 
     .subtitle {
       font-size: 1rem;
+    }
+
+    .form-card {
+      padding: 1.5rem;
+    }
+
+    .form-card h3 {
+      font-size: 1.25rem;
     }
 
     .intro {

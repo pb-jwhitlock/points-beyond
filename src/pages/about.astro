@@ -291,14 +291,12 @@ import Layout from '../layouts/Layout.astro';
 
   .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
   .expertise-card:last-child {
-    grid-column: 1 / -1;
-    max-width: 400px;
-    margin: 0 auto;
+    grid-column: 2;
   }
 
   .expertise-card {
@@ -459,6 +457,10 @@ import Layout from '../layouts/Layout.astro';
 
     .expertise-grid {
       grid-template-columns: 1fr;
+    }
+
+    .expertise-card:last-child {
+      grid-column: 1;
     }
 
     .results {

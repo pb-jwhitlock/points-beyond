@@ -64,13 +64,6 @@ import Layout from '../layouts/Layout.astro';
           <h3>Search Engine Optimization</h3>
           <p>Traditional SEO remains critical. We combine proven optimization techniques with AI-era strategies to ensure your content ranks in both conventional search results and AI-curated responses.</p>
         </div>
-        <div class="strength-card">
-          <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
-          </div>
-          <h3>Voice AI Optimization</h3>
-          <p>Alexa, Siri, and Google Assistant are how millions access information daily. We optimize your content for natural language queries and voice-first interactions to capture this growing audience.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -295,8 +288,10 @@ import Layout from '../layouts/Layout.astro';
 
   .strengths-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .strength-card {

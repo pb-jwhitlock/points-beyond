@@ -189,7 +189,11 @@ import Layout from '../layouts/Layout.astro';
 
 <style is:global>
   /* Hide LinkedIn link in footer on this page only */
-  footer p:last-child {
-    display: none;
+  footer p:last-child,
+  footer a[href*="linkedin"] {
+    display: none !important;
+  }
+  footer p:has(a[href*="linkedin"]) {
+    display: none !important;
   }
 </style>

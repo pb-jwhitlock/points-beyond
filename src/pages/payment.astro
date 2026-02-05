@@ -185,3 +185,10 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 </style>
+
+<style is:global>
+  /* Hide LinkedIn link in footer on this page only */
+  footer p:last-child {
+    display: none;
+  }
+</style>

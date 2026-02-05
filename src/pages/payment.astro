@@ -1,0 +1,313 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Complete Your Payment - Points Beyond" description="Secure payment for Points Beyond consulting services.">
+  <section class="payment-hero">
+    <div class="container">
+      <div class="hero-badge">Next Step</div>
+      <h1>Complete Your Payment</h1>
+      <p class="hero-sub">Thanks for the conversation. When you're ready, use the button below to get started.</p>
+    </div>
+  </section>
+
+  <section class="payment-main">
+    <div class="container">
+      <div class="payment-card">
+        <div class="card-header">
+          <div class="lock-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <span>Secure Payment</span>
+        </div>
+
+        <a href="#REPLACE_WITH_STRIPE_LINK" class="stripe-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          Proceed to Payment
+        </a>
+
+        <p class="payment-note">Powered by Stripe. Your payment info is never stored on our servers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="included">
+    <div class="container">
+      <h2>What You're Getting</h2>
+      <div class="included-grid">
+        <div class="included-item">
+          <div class="item-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <p>AI-optimized content strategy tailored to your business</p>
+        </div>
+        <div class="included-item">
+          <div class="item-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <p>Answer engine, SEO, and voice search optimization</p>
+        </div>
+        <div class="included-item">
+          <div class="item-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <p>Scalable, brand-aligned content production</p>
+        </div>
+        <div class="included-item">
+          <div class="item-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <p>Ongoing performance tracking and optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-cta">
+    <div class="container">
+      <a href="#REPLACE_WITH_STRIPE_LINK" class="stripe-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+        Proceed to Payment
+      </a>
+    </div>
+  </section>
+
+  <section class="questions">
+    <div class="container">
+      <p>Questions? Reach out anytime.</p>
+      <a href="https://www.linkedin.com/in/johnhwhitlock/" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        Connect on LinkedIn
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* Hero */
+  .payment-hero {
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .payment-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: var(--color-primary-light);
+    padding: 0.4rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .payment-hero h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #e2e8f0 0%, #a78bfa 50%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .hero-sub {
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    line-height: 1.7;
+  }
+
+  /* Payment Card */
+  .payment-main {
+    padding: 2rem 2rem 3rem;
+  }
+
+  .payment-card {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+  }
+
+  .card-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .lock-icon {
+    color: var(--color-primary-light);
+  }
+
+  .stripe-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #635bff 0%, #4f46e5 100%);
+    color: white;
+    padding: 1.1rem 3rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.15rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .stripe-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(99, 91, 255, 0.45);
+    color: white;
+  }
+
+  .payment-note {
+    margin-top: 1.25rem;
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+  }
+
+  /* Included Section */
+  .included {
+    padding: 3rem 2rem;
+  }
+
+  .included h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .included-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 12px;
+  }
+
+  .item-icon {
+    color: #34d399;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .included-item p {
+    color: var(--color-text-muted);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Bottom CTA */
+  .bottom-cta {
+    padding: 2rem 2rem 3rem;
+    text-align: center;
+  }
+
+  /* Questions */
+  .questions {
+    padding: 2rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .questions p {
+    color: var(--color-text-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary-light);
+    font-weight: 500;
+  }
+
+  .contact-link:hover {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .payment-hero {
+      padding: 4rem 1.5rem 2.5rem;
+    }
+
+    .payment-hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+    }
+
+    .payment-main {
+      padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+    .payment-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .included {
+      padding: 2rem 1.5rem;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stripe-button {
+      padding: 1rem 2rem;
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stripe-button {
+      width: 100%;
+      max-width: none;
+    }
+  }
+</style>

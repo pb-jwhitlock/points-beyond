@@ -42,8 +42,8 @@ import Layout from '../layouts/Layout.astro';
             <span class="tag">Project Management</span>
           </div>
 
-          <div class="info-grid">
-            <div class="info-item">
+          <div class="info-row">
+            <div class="info-item info-left">
               <h3>Education</h3>
               <p>
                 <strong>Master of Public Policy</strong><br>
@@ -51,17 +51,17 @@ import Layout from '../layouts/Layout.astro';
               </p>
             </div>
 
-            <div class="info-item">
+            <div class="info-item info-center">
               <h3>Clearance</h3>
               <p>TS/SCI (Current)</p>
             </div>
-          </div>
 
-          <div class="connect">
-            <a href="https://www.linkedin.com/in/johnhwhitlock/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              LinkedIn
-            </a>
+            <div class="info-item info-right">
+              <a href="https://www.linkedin.com/in/johnhwhitlock/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -116,16 +116,8 @@ import Layout from '../layouts/Layout.astro';
           <span class="result-label">Years of enterprise transformation experience</span>
         </div>
       </div>
-      <p class="result-highlight">
-        Managed the Navy's Business Enterprise Architecture evolution prioritizing financial auditability, system modernization, and standardized, data-driven business process implementation.
-      </p>
-    </div>
-  </section>
-
-  <section class="accomplishments">
-    <div class="container">
       <div class="accomplishments-card">
-        <h2>Key Accomplishments</h2>
+        <h3>Key Accomplishments</h3>
         <ul>
           <li>Managed the Navy's Business Enterprise Architecture evolution prioritizing financial auditability, system modernization, and standardized, data-driven business process implementation</li>
           <li>Saved $17M+ through strategic operational improvements</li>
@@ -247,13 +239,14 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 500;
   }
 
-  .info-grid {
+  .info-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--color-card-border);
+    align-items: center;
   }
 
   .info-item h3 {
@@ -272,10 +265,16 @@ import Layout from '../layouts/Layout.astro';
     color: var(--color-text);
   }
 
-  .connect {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--color-card-border);
+  .info-left {
+    text-align: left;
+  }
+
+  .info-center {
+    text-align: center;
+  }
+
+  .info-right {
+    text-align: right;
   }
 
   .linkedin-link {
@@ -410,10 +409,15 @@ import Layout from '../layouts/Layout.astro';
     -webkit-backdrop-filter: blur(10px);
   }
 
-  .accomplishments-card h2 {
+  .accomplishments-card h2,
+  .accomplishments-card h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
     color: var(--color-text);
+  }
+
+  .results .accomplishments-card {
+    margin-top: 1.5rem;
   }
 
   .accomplishments-card ul {
@@ -462,6 +466,17 @@ import Layout from '../layouts/Layout.astro';
 
     .about-content h2 {
       font-size: 2rem;
+    }
+
+    .info-row {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .info-left,
+    .info-center,
+    .info-right {
+      text-align: center;
     }
 
     .expertise-section {

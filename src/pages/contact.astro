@@ -53,6 +53,12 @@ import Layout from '../layouts/Layout.astro';
           <div class="summary-card">
             <h3>How I Can Help</h3>
             <ul>
+              <li>Answer Engine Optimization — Be the answer AI delivers</li>
+              <li>Search Engine Optimization — Rank in traditional & AI results</li>
+              <li>AI Voice Receptionist — 24/7 intelligent call handling</li>
+            </ul>
+            <h3>Federal Clients</h3>
+            <ul>
               <li>Enterprise architecture assessment and planning</li>
               <li>IT strategy development and alignment</li>
               <li>Business analytics and data-driven decision support</li>
@@ -72,7 +78,7 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .page-header {
-    padding: 5rem 2rem;
+    padding: 3rem 2rem 1rem;
     text-align: center;
     position: relative;
   }
@@ -111,7 +117,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact {
-    padding: 4rem 2rem;
+    padding: 1.5rem 2rem;
   }
 
   .contact-content {
@@ -124,7 +130,7 @@ import Layout from '../layouts/Layout.astro';
     background: var(--color-card-bg);
     border: 1px solid var(--color-card-border);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 1.75rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     height: 100%;
@@ -138,14 +144,14 @@ import Layout from '../layouts/Layout.astro';
 
   .info-card > p {
     color: var(--color-text-muted);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     line-height: 1.7;
   }
 
   .contact-methods {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .contact-method {
@@ -191,13 +197,17 @@ import Layout from '../layouts/Layout.astro';
   .summary-card h3 {
     color: var(--color-text);
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .summary-card h3:not(:first-child) {
+    margin-top: 1.25rem;
   }
 
   .summary-card ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .summary-card li {
@@ -235,7 +245,7 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 768px) {
     .page-header {
-      padding: 4rem 1.5rem;
+      padding: 2rem 1.5rem 1rem;
     }
 
     .page-header h1 {
@@ -243,7 +253,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .contact {
-      padding: 3rem 1.5rem;
+      padding: 1rem 1.5rem;
     }
 
     .contact-content {
@@ -251,7 +261,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .info-card, .summary-card {
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 1.25rem;
     }
 
     .info-card h2 {

@@ -1,0 +1,481 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Points Beyond - AI Automation Consultant">
+  <div class="refined-page">
+    <section class="hero">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <p class="eyebrow">AI Automation Consultant</p>
+          <h1>Points Beyond</h1>
+          <div class="hero-rule"></div>
+          <p class="subtitle">Strategic content optimization for businesses ready to lead in the AI search era</p>
+        </div>
+        <div class="hero-form">
+          <div class="form-card">
+            <h3>Get Your Free Proposal</h3>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Email Address" required />
+              </div>
+              <div class="form-group">
+                <input type="url" name="website" placeholder="Website URL" />
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" placeholder="Phone Number" />
+              </div>
+              <button type="submit" class="form-submit">Get Started</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-label">Our Approach</div>
+          <div class="intro-content">
+            <h2>Content That Speaks to AI and Humans</h2>
+            <p>
+              The way people find information is changing. AI-powered search engines, voice assistants, and answer engines
+              are reshaping how your audience discovers your brand. Points Beyond helps businesses create scalable content
+              strategies that maintain authentic brand voice while ensuring visibility in AI-generated search results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="services-header">
+          <span class="section-number">01</span>
+          <h2>Services</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <span class="service-number">01</span>
+            <h3>Answer Engine Optimization</h3>
+            <p>Position your content to be the definitive answer when AI systems like ChatGPT, Perplexity, and Google AI Overview respond to user queries.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-number">02</span>
+            <h3>Search Engine Optimization</h3>
+            <p>We combine proven optimization techniques with AI-era strategies to ensure your content ranks in both conventional search results and AI-curated responses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="voice-section">
+      <div class="container">
+        <div class="voice-card">
+          <div class="voice-header">
+            <span class="section-number">02</span>
+            <h2>AI Voice Receptionist</h2>
+          </div>
+          <p class="voice-intro">
+            Never miss a call again. Our AI Voice Receptionist answers 24/7, books appointments, and handles FAQs—so you can focus on your business.
+          </p>
+          <div class="voice-features">
+            <div class="feature">
+              <span class="feature-line"></span>
+              <p>Automatically book, reschedule, and confirm appointments</p>
+            </div>
+            <div class="feature">
+              <span class="feature-line"></span>
+              <p>Answer common questions about hours, services, and pricing</p>
+            </div>
+            <div class="feature">
+              <span class="feature-line"></span>
+              <p>Natural conversations that handle complex requests</p>
+            </div>
+            <div class="feature">
+              <span class="feature-line"></span>
+              <p>24/7 availability with zero hold time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready for the AI Search Era?</h2>
+          <p>Let's discuss how Points Beyond can help your business thrive.</p>
+          <a href="/points-beyond/contact/" class="cta-button">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .refined-page {
+    --color-cream: #faf9f7;
+    --color-charcoal: #1a1a1a;
+    --color-warm-gray: #6b6560;
+    --color-accent: #8b7355;
+    --color-accent-light: #c4b49a;
+    --color-border: #e8e4df;
+
+    background: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 8rem 2rem 6rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hero-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    color: var(--color-charcoal);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-rule {
+    width: 60px;
+    height: 1px;
+    background: var(--color-accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-warm-gray);
+    line-height: 1.7;
+    max-width: 480px;
+  }
+
+  /* Form */
+  .form-card {
+    background: white;
+    border: 1px solid var(--color-border);
+    padding: 2.5rem;
+  }
+
+  .form-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-charcoal);
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    color: var(--color-charcoal);
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input::placeholder {
+    color: var(--color-warm-gray);
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-charcoal);
+    color: white;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 0.5rem;
+  }
+
+  .form-submit:hover {
+    background: var(--color-accent);
+  }
+
+  /* Intro */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .intro {
+    padding: 6rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 4rem;
+  }
+
+  .intro-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .intro-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--color-charcoal);
+  }
+
+  .intro-content p {
+    color: var(--color-warm-gray);
+    line-height: 1.9;
+    font-size: 1.05rem;
+    max-width: 700px;
+  }
+
+  /* Services */
+  .services {
+    padding: 6rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .services-header {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-number {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .services-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .service-card {
+    padding: 2.5rem;
+    border: 1px solid var(--color-border);
+    background: white;
+    transition: border-color 0.3s ease;
+  }
+
+  .service-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .service-number {
+    font-size: 0.7rem;
+    color: var(--color-accent-light);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .service-card p {
+    color: var(--color-warm-gray);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  /* Voice Section */
+  .voice-section {
+    padding: 6rem 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .voice-card {
+    max-width: 800px;
+  }
+
+  .voice-header {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .voice-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .voice-intro {
+    color: var(--color-warm-gray);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+  }
+
+  .voice-features {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .feature-line {
+    width: 30px;
+    height: 1px;
+    background: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .feature p {
+    color: var(--color-charcoal);
+    font-size: 0.95rem;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 8rem 2rem;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .cta-content p {
+    color: var(--color-warm-gray);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--color-charcoal);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background: var(--color-accent);
+    color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero-wrapper {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+    }
+
+    .intro-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      padding: 5rem 1.5rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .intro, .services, .voice-section {
+      padding: 4rem 1.5rem;
+    }
+
+    .cta-section {
+      padding: 5rem 1.5rem;
+    }
+  }
+</style>

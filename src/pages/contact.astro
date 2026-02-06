@@ -51,14 +51,14 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="services-summary">
           <div class="summary-card">
-            <div class="help-header">
-              <h3>How I Can Help</h3>
-              <h3>Federal Clients</h3>
-            </div>
+            <h3>How I Can Help</h3>
             <ul>
               <li>Answer Engine Optimization — Be the answer AI delivers</li>
               <li>Search Engine Optimization — Rank in traditional & AI results</li>
               <li>AI Voice Receptionist — 24/7 intelligent call handling</li>
+            </ul>
+            <h3>Federal Clients</h3>
+            <ul>
               <li>Enterprise architecture assessment and planning</li>
               <li>IT strategy development and alignment</li>
               <li>Business analytics and data-driven decision support</li>
@@ -200,15 +200,8 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 0.75rem;
   }
 
-  .help-header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .help-header h3 {
-    margin-bottom: 0;
+  .summary-card h3 + ul + h3 {
+    margin-top: 1rem;
   }
 
   .summary-card ul {

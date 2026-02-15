@@ -1,0 +1,70 @@
+---
+const today = new Date();
+---
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="/points-beyond/logo.png" alt="Points Beyond Logo" width="45" height="45" />
+      <span class="logo-text">Points Beyond</span>
+    </div>
+
+    <div class="copyright-section">
+      <p>© {today.getFullYear()} Points Beyond. All rights reserved.</p>
+      <p>All content, logos, and images are protected by copyright law.</p>
+    </div>
+
+    <div class="sms-section">
+      <p class="sms-notice">
+        <strong>SMS Disclosure:</strong> By providing your phone number, you agree to receive text messages from Points Beyond. Message and data rates may apply. Reply STOP to opt out at any time.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    width: 100%;
+    /* This creates the "Bottom-Up" effect */
+    background: linear-gradient(
+      to top, 
+      rgba(235, 224, 255, 1) 0%,   /* Purple/Blue starts at very bottom */
+      rgba(224, 242, 255, 1) 30%, 
+      #ffffff 100%                 /* Fades to white as it goes up */
+    );
+    padding: 6rem 0 3rem; /* Generous top padding for the fade effect */
+    text-align: center;
+    border: none;
+    margin-top: 0;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .logo-text {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #1a202c;
+  }
+  .copyright-section p {
+    margin: 0.1rem 0;
+    font-size: 0.85rem;
+    color: #4a5568;
+  }
+  .sms-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.05); 
+    width: 80%;
+  }
+  .sms-notice {
+    font-size: 0.7rem;
+    color: #718096;
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+</style>

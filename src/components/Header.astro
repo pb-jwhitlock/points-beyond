@@ -1,0 +1,120 @@
+---
+const navLinks = [
+  { href: '/points-beyond/', label: 'Home' },
+  { href: '/points-beyond/services', label: 'Services' },
+  { href: '/points-beyond/about', label: 'About' },
+  { href: '/points-beyond/contact', label: 'Contact' },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <nav class="container">
+    <a href="/points-beyond/" class="logo">
+      <img src="/points-beyond/logo.png" alt="Points Beyond Logo" width="30" height="30" />
+      <span class="logo-text">Points Beyond</span>
+    </a>
+
+    <div class="nav-wrapper">
+      <ul class="nav-links">
+        {navLinks.map(link => (
+          <li>
+            <a href={link.href} class:list={['nav-link', { active: currentPath === link.href }]}>
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      
+      <div class="ai-status">
+        <span class="status-dot"></span>
+        <span class="status-text">AI DISPATCH: ACTIVE</span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    width: 100%;
+    background: transparent !important; /* Removes the white background */
+    border-bottom: none !important;     /* Removes the separation line */
+    position: absolute;                /* Floats the header over the hero */
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1.5rem 2rem;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #1a202c;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .nav-link:hover, .nav-link.active {
+    color: #1a202c;
+  }
+  .ai-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: #f0fff4; /* Very light green */
+    border: 1px solid #c6f6d5;
+    border-radius: 6px;
+    color: #2f855a;
+    font-size: 0.65rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #38a169;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #38a169;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle?.addEventListener('click', () => {
+    navLinks?.classList.toggle('open');
+  });
+</script>

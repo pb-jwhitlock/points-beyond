@@ -206,8 +206,18 @@ import Layout from '../layouts/Layout.astro';
 
   /* Hero Section */
   .hero {
-    position: relative;
-    padding: 6rem 0 2rem;
+    /* Ultra-softened transition */
+      background: linear-gradient(
+        to bottom, 
+        rgba(249, 247, 255, 0.4) 0%,   /* Barely-there purple */
+        rgba(244, 249, 255, 0.3) 40%,  /* Barely-there blue */
+        rgba(255, 255, 255, 1) 100%    /* Clean white transition */
+      ) !important;
+      
+      padding: 8rem 0 4rem; 
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
   }
 
   .hero-gradient {
@@ -226,19 +236,21 @@ import Layout from '../layouts/Layout.astro';
 
   .gradient-left {
     height: 14rem;
-    background: linear-gradient(to bottom right, var(--color-primary), #a855f7);
+    /* Swapped vibrant indigo for a very pale lavender-grey */
+    background: linear-gradient(to bottom right, #eef2ff, #f5f3ff);
     margin-left: -13rem;
   }
 
   .gradient-right {
     height: 8rem;
-    background: linear-gradient(to right, #22d3ee, #7dd3fc);
+    /* Swapped cyan for a very pale ice-blue */
+    background: linear-gradient(to right, #f0f9ff, #e0f2fe);
     margin-top: 6rem;
   }
 
   .hero-content {
-    position: relative;
-    padding-top: 2rem;
+    /* Lowered from 0.4 to 0.2 to further dim the intensity */
+    opacity: 0.2;
   }
 
   .hero-text {
@@ -524,9 +536,11 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* CTA Section */
-  .cta-section {
-    position: relative;
-    padding: 2rem 0 1rem;
+      .cta-section {
+        margin-top: 2rem; /* Reduced from 4rem to pull it closer to the cards */
+        background: transparent;
+        padding: 3rem 0 1rem; /* Tightened internal padding */
+        text-align: center;
   }
 
   .cta-gradient {
@@ -631,11 +645,10 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .cta-section {
-      padding: 1.5rem 0 0.5rem;
-    }
-
-    .features-title {
-      flex-wrap: wrap;
+    margin-top: 1.5rem; /* Nudged higher up from the cards */
+    background: transparent;
+    padding: 2rem 0 1rem;
+    text-align: center;
     }
   }
 </style>

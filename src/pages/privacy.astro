@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy">
+  <main class="container">
+    <h1>Privacy Policy</h1>
+    <p>Last Updated: February 14, 2026</p>
+    
+    <section>
+      <h2>Information Collection</h2>
+      <p>We collect information you provide directly to us, such as when you submit a lead form or contact us via phone or SMS.</p>
+    </section>
+
+    <section style="background: rgba(var(--color-accent-rgb), 0.1); padding: 20px; border-left: 4px solid var(--color-accent); border-radius: 8px;">
+      <h2>SMS Compliance & Privacy</h2>
+      <p><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+    </section>
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>You may opt-out of receiving text messages from us at any time by replying STOP to any message you receive from us.</p>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  main { padding: 4rem 1rem; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+  h1 { margin-bottom: 2rem; color: var(--color-text); }
+  h2 { margin-top: 2rem; color: var(--color-text); }
+  section { margin-bottom: 2rem; }
+</style>

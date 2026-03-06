@@ -170,8 +170,8 @@ import Layout from '../layouts/Layout.astro';
   @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
 
   .astrolus-page {
-    --color-primary: #0f2d52;
-    --color-primary-light: #1a4a7a;
+    --color-primary: #0a2240;
+    --color-primary-light: #1a3d6b;
     --color-secondary: #ea580c;
     --color-bg: #f4f9fc;
     --color-surface: #e8f4f8;
@@ -206,12 +206,7 @@ import Layout from '../layouts/Layout.astro';
 
   /* Hero Section */
   .hero {
-      background: linear-gradient(
-        to bottom,
-        #ffffff 0%,
-        #f2f3f5 40%,
-        #ffffff 100%
-      ) !important;
+      background: #ffffff !important;
       padding: 8rem 0 4rem;
       min-height: 80vh;
       display: flex;
@@ -235,14 +230,14 @@ import Layout from '../layouts/Layout.astro';
   .gradient-left {
     height: 14rem;
     /* Swapped vibrant indigo for a very pale lavender-grey */
-    background: linear-gradient(to bottom right, #f0f1f3, #e8eaec);
+    background: transparent;
     margin-left: -13rem;
   }
 
   .gradient-right {
     height: 8rem;
     /* Swapped cyan for a very pale ice-blue */
-    background: linear-gradient(to right, #e4e6e9, #f0f1f3);
+    background: transparent;
     margin-top: 6rem;
   }
 
@@ -269,7 +264,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero h1 .text-primary {
-    color: #0f2d52 !important;
+    color: #0a2240 !important;
   }
 
   .hero-sub {
@@ -319,7 +314,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .btn-secondary {
-    background: rgba(15, 45, 82, 0.1);
+    background: rgba(10, 34, 64, 0.1);
     color: var(--color-primary);
     border: 1px solid transparent;
   }

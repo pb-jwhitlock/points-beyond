@@ -5,9 +5,60 @@ import Footer from '../components/Footer.astro';
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	canonical?: string;
+	schema?: object;
 }
 
-const { title, description = "AI-Driven Marketing for the Modern Trade" } = Astro.props;
+const {
+  title,
+  description = "Points Beyond helps businesses create AI-optimized content strategies that ensure visibility in ChatGPT, Google AI Overview, and Perplexity search results. Based in Fairfax County, Virginia.",
+  image = "https://pointsbeyond.ai/logo.png",
+  canonical,
+  schema
+} = Astro.props;
+
+const canonicalURL = canonical ?? `https://pointsbeyond.ai${Astro.url.pathname}`;
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Points Beyond",
+  "url": "https://pointsbeyond.ai",
+  "logo": "https://pointsbeyond.ai/logo.png",
+  "image": "https://pointsbeyond.ai/logo.png",
+  "description": "AI content strategy and Answer Engine Optimization consultancy helping businesses achieve visibility in AI-generated search results.",
+  "founder": {
+    "@type": "Person",
+    "name": "John Whitlock",
+    "jobTitle": "Founder & Principal Consultant",
+    "url": "https://www.linkedin.com/in/johnhwhitlock/",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Georgetown University"
+    }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fairfax County",
+    "addressRegion": "VA",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Washington, D.C." },
+    { "@type": "State", "name": "Virginia" },
+    { "@type": "Country", "name": "United States" }
+  ],
+  "serviceType": [
+    "Answer Engine Optimization",
+    "Search Engine Optimization",
+    "AI Content Strategy",
+    "AI Voice Receptionist"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/johnhwhitlock/"
+  ]
+};
 ---
 
 <!doctype html>
@@ -16,6 +67,31 @@ const { title, description = "AI-Driven Marketing for the Modern Trade" } = Astr
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Points Beyond" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Schema: Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+
+    <!-- Page-specific schema -->
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

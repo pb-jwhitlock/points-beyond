@@ -2,7 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Points Beyond - AI Automation Consultant">
+<Layout
+  title="Points Beyond | AI Content Strategy & Answer Engine Optimization"
+  description="Points Beyond helps businesses get found in AI-generated search results. Expert Answer Engine Optimization (AEO), SEO, and AI Voice Receptionist services. Based in Fairfax County, VA."
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Points Beyond",
+    "url": "https://pointsbeyond.ai",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pointsbeyond.ai/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }}
+>
   <div class="astrolus-page">
     <!-- Hero Section -->
     <section class="hero" id="home">

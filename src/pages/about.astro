@@ -2,7 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About - Points Beyond">
+<Layout
+  title="About John Whitlock | AI Strategy Consultant | Points Beyond"
+  description="John Whitlock is an IT strategist and AI consultant with 10+ years of enterprise transformation experience. Georgetown MPP. TS/SCI cleared. Founder of Points Beyond in Fairfax County, VA."
+  canonical="https://pointsbeyond.ai/about/"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "John Whitlock",
+      "jobTitle": "Founder & Principal Consultant",
+      "worksFor": { "@type": "Organization", "name": "Points Beyond" },
+      "url": "https://www.linkedin.com/in/johnhwhitlock/",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Georgetown University" },
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "Master of Public Policy" },
+      "knowsAbout": ["AI Content Strategy", "Answer Engine Optimization", "Enterprise Architecture", "IT Strategy", "Business Analytics"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Fairfax County", "addressRegion": "VA" }
+    }
+  }}
+>
   <section class="page-header">
     <div class="container">
       <h1>About</h1>

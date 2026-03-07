@@ -2,7 +2,40 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Services - Points Beyond">
+<Layout
+  title="AI Content Strategy Services | AEO, SEO & AI Voice Receptionist | Points Beyond"
+  description="Points Beyond offers Answer Engine Optimization (AEO), Search Engine Optimization (SEO), and AI Voice Receptionist services. Be the answer ChatGPT, Perplexity, and Google AI deliver."
+  canonical="https://pointsbeyond.ai/services/"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Points Beyond Services",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "position": 1,
+        "name": "Answer Engine Optimization (AEO)",
+        "description": "Position your content to be cited by ChatGPT, Perplexity, Claude, and Google AI Overview when users ask questions in your industry.",
+        "provider": { "@type": "Organization", "name": "Points Beyond" }
+      },
+      {
+        "@type": "Service",
+        "position": 2,
+        "name": "Search Engine Optimization (SEO)",
+        "description": "Rank in both conventional Google search results and AI-curated responses with proven SEO fundamentals combined with AI-era strategies.",
+        "provider": { "@type": "Organization", "name": "Points Beyond" }
+      },
+      {
+        "@type": "Service",
+        "position": 3,
+        "name": "AI Voice Receptionist",
+        "description": "24/7 AI-powered phone receptionist that books appointments, answers FAQs, and handles calls with natural conversation.",
+        "provider": { "@type": "Organization", "name": "Points Beyond" },
+        "offers": { "@type": "Offer", "price": "599", "priceCurrency": "USD" }
+      }
+    ]
+  }}
+>
   <section class="page-header">
     <div class="container">
       <h1>Services</h1>

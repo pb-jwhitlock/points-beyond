@@ -2,7 +2,28 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Contact - Points Beyond">
+<Layout
+  title="Contact Points Beyond | AI Content Strategy Consultant"
+  description="Get in touch with Points Beyond to discuss AI content strategy, Answer Engine Optimization, or SEO for your business. Serving the Washington D.C. metropolitan area and beyond."
+  canonical="https://pointsbeyond.ai/contact/"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Points Beyond",
+    "url": "https://pointsbeyond.ai/contact/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Points Beyond",
+      "url": "https://pointsbeyond.ai",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    }
+  }}
+>
   <section class="page-header">
     <div class="container">
       <h1>Contact</h1>

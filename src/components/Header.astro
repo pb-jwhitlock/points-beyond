@@ -110,6 +110,39 @@ const currentPath = Astro.url.pathname;
     50% { opacity: 1; }
     100% { opacity: 0.5; }
   }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 0.75rem 1rem;
+      overflow-x: hidden;
+    }
+    nav {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+    }
+    .nav-wrapper {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      width: 100%;
+    }
+    .nav-links {
+      flex-wrap: wrap;
+      gap: 0.25rem 0.75rem;
+    }
+    .nav-link {
+      font-size: 0.85rem;
+    }
+    .ai-status {
+      font-size: 0.6rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-links {
+      gap: 0.15rem 0.5rem;
+    }
+  }
 </style>
 
 <script>

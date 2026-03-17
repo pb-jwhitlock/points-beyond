@@ -16,21 +16,19 @@ const currentPath = Astro.url.pathname;
       <span class="logo-text">Points Beyond</span>
     </a>
 
-    <div class="nav-wrapper">
-      <ul class="nav-links">
-        {navLinks.map(link => (
-          <li>
-            <a href={link.href} class:list={['nav-link', { active: currentPath === link.href }]}>
-              {link.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-      
-      <div class="ai-status">
-        <span class="status-dot"></span>
-        <span class="status-text">AI DISPATCH: ACTIVE</span>
-      </div>
+    <ul class="nav-links">
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class:list={['nav-link', { active: currentPath === link.href }]}>
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="ai-status">
+      <span class="status-dot"></span>
+      <span class="status-text">AI DISPATCH: ACTIVE</span>
     </div>
   </nav>
 </header>
@@ -53,6 +51,7 @@ const currentPath = Astro.url.pathname;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
   }
   .logo {
     display: flex;
@@ -62,11 +61,7 @@ const currentPath = Astro.url.pathname;
     color: #1a202c;
     font-weight: 700;
     font-size: 1.2rem;
-  }
-  .nav-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    white-space: nowrap;
   }
   .nav-links {
     display: flex;
@@ -89,13 +84,14 @@ const currentPath = Astro.url.pathname;
     align-items: center;
     gap: 6px;
     padding: 4px 10px;
-    background: #f0fff4; /* Very light green */
+    background: #f0fff4;
     border: 1px solid #c6f6d5;
     border-radius: 6px;
     color: #2f855a;
     font-size: 0.65rem;
     font-weight: 700;
     white-space: nowrap;
+    flex-shrink: 0;
   }
   .status-dot {
     width: 6px;
@@ -104,6 +100,7 @@ const currentPath = Astro.url.pathname;
     border-radius: 50%;
     box-shadow: 0 0 5px #38a169;
     animation: pulse 2s infinite;
+    flex-shrink: 0;
   }
   @keyframes pulse {
     0% { opacity: 0.5; }
@@ -116,31 +113,44 @@ const currentPath = Astro.url.pathname;
       padding: 0.75rem 1rem;
       overflow-x: hidden;
     }
+    /* Row 1: logo (left) + ai-status (right)
+       Row 2: nav-links (full width) */
     nav {
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.4rem 0;
       padding: 0;
+      align-items: center;
     }
-    .nav-wrapper {
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      width: 100%;
+    .logo {
+      flex: 1;
+    }
+    .ai-status {
+      order: 2;
+      font-size: 0.55rem;
+      padding: 3px 7px;
+      gap: 4px;
+    }
+    .status-dot {
+      width: 5px;
+      height: 5px;
     }
     .nav-links {
+      order: 3;
+      flex: 0 0 100%;
       flex-wrap: wrap;
-      gap: 0.25rem 0.75rem;
+      gap: 0.1rem 0.65rem;
     }
     .nav-link {
       font-size: 0.85rem;
     }
-    .ai-status {
-      font-size: 0.6rem;
-    }
   }
 
   @media (max-width: 480px) {
+    .nav-link {
+      font-size: 0.8rem;
+    }
     .nav-links {
-      gap: 0.15rem 0.5rem;
+      gap: 0.1rem 0.5rem;
     }
   }
 </style>

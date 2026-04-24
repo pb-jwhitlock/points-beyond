@@ -5,7 +5,7 @@ Company website for Points Beyond AI / Points Beyond LLC (John Whitlock).
 AI content strategy consultancy in Fairfax County, VA — services: AI Voice Agents, Answer Engine Optimization (AEO), SEO.
 
 **Live site**: https://pointsbeyond.ai — currently served from `points-beyond-frontend-1` (plain HTML repo).
-**This repo** (`points-beyond-2`): Astro 5 rebuild — in progress, not yet deployed.
+**This repo**: GitHub repo is `pb-jwhitlock/points-beyond` (no -2 suffix); local directory is `~/points-beyond-2`. Same project — see Known Gotchas. Astro 5 rebuild — in progress, not yet deployed.
 
 ## Stack / Architecture
 - **Framework**: Astro 5.x (SSG, static output)
@@ -49,7 +49,7 @@ AI content strategy consultancy in Fairfax County, VA — services: AI Voice Age
 Push to `main` → GitHub Actions builds Astro → uploads `dist/` → deploys to GitHub Pages.
 
 **To cut over to this repo:**
-1. Enable GitHub Pages on `pb-jwhitlock/points-beyond-2` (Settings → Pages → Source: GitHub Actions)
+1. Enable GitHub Pages on `pb-jwhitlock/points-beyond` (Settings → Pages → Source: GitHub Actions)
 2. Set custom domain to `pointsbeyond.ai`
 3. Verify DNS; then disable Pages on `points-beyond-frontend-1`
 
@@ -63,7 +63,7 @@ None identified. The Astro rebuild is functionally equivalent to the live site.
 
 ## Known Gotchas
 - `base: '/'` in `astro.config.mjs` is set for the apex domain — don't change to a subpath
-- `points-beyond` (no suffix) is an older separate repo at `https://pb-jwhitlock.github.io/points-beyond/` — unrelated
+- **Local directory vs GitHub repo name mismatch**: Local directory is `~/points-beyond-2` but the GitHub repo is `pb-jwhitlock/points-beyond` (no -2 suffix). They are the same project. The `-2` suffix is a leftover local naming choice from when we were uncertain which repo was canonical. Consider renaming the local dir to match: `mv ~/points-beyond-2 ~/points-beyond`.
 - All content is hardcoded in `.astro` files; no CMS or data layer
 - Prototype pages are reachable by URL but not in nav — safe to delete
 
@@ -73,7 +73,7 @@ None identified. The Astro rebuild is functionally equivalent to the live site.
 - Created CLAUDE.md and `/update-context` command for this repo
 
 ## Next Steps
-1. Decide whether `points-beyond-2` is ready to replace the live site — do a side-by-side review
-2. Enable GitHub Pages on this repo and cut over `pointsbeyond.ai`
+1. Decide whether `pb-jwhitlock/points-beyond` (Astro rebuild) is ready to replace the live site — do a side-by-side review
+2. Enable GitHub Pages on `pb-jwhitlock/points-beyond` and cut over `pointsbeyond.ai`
 3. Choose CRM for contact form (Systeme.io vs. GHL) and wire up form action
 4. Delete prototype pages and `index-original.astro` post-cutover

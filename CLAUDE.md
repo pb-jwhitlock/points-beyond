@@ -72,8 +72,35 @@ None identified. The Astro rebuild is functionally equivalent to the live site.
 - Confirmed live site (`points-beyond-frontend-1`) is raw HTML via GitHub Pages + Fastly with no form backend
 - Resolved local directory chaos: repo was nested at `~/points-beyond/points-beyond-2/` due to accidental `mv`; cleaned up to canonical `~/points-beyond/` matching GitHub repo name
 
+## Service Positioning & Pricing (decided April 24, 2026)
+
+### Three-Service Structure
+1. **AI Voice Agents** — lead offer
+2. **Reputation Management** — Google reviews
+3. **Answer Engine & Search Optimization** — AEO + SEO bundled
+
+### Pricing (Real Estate Vertical)
+| Service | Setup | Monthly |
+|---|---|---|
+| AI Voice Agent | $1,500 | $349/mo |
+| Reputation Management | $750 | $249/mo |
+| AEO Foundation | $2,500 (one-time) | $599/mo retainer (optional) |
+| Bundle (all three) | $3,995 | $797/mo |
+
+**Early adopter offer**: First 5 clients get 40% off setup in exchange for case study + testimonial.
+
+### Active Campaign (in development)
+Cold outreach to mid-tier Northern VA real estate agents via personalized Loom video + SMS + AI demo call workflow.
+- **SMS**: Sent from personal phone (not GHL) for TCPA safety
+- **Email automation**: Via GHL
+
+### CRM Decision (pending)
+Considering Systeme.io free tier vs. GHL ($97/mo) for own agency CRM and email automation.
+- Lean toward GHL once first paying client lands
+- Use Systeme.io until then
+
 ## Next Steps
-1. Decide whether `pb-jwhitlock/points-beyond` (Astro rebuild) is ready to replace the live site — do a side-by-side review
-2. Enable GitHub Pages on `pb-jwhitlock/points-beyond` and cut over `pointsbeyond.ai`
-3. Choose CRM for contact form (Systeme.io vs. GHL) and wire up form action
-4. Delete prototype pages and `index-original.astro` post-cutover
+1. Set up Formspree on contact form (both repos) — fixes silent lead loss
+2. Content parity audit: live HTML site vs. Astro rebuild
+3. Update services page in Astro to reflect three-service structure
+4. Cutover to production (enable Pages, swap custom domain, archive old repo)

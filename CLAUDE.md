@@ -5,7 +5,7 @@ Company website for Points Beyond AI / Points Beyond LLC (John Whitlock).
 AI content strategy consultancy in Fairfax County, VA — services: AI Voice Agents, Answer Engine Optimization (AEO), SEO.
 
 **Live site**: https://pointsbeyond.ai — currently served from `points-beyond-frontend-1` (plain HTML repo).
-**This repo**: GitHub repo is `pb-jwhitlock/points-beyond` (no -2 suffix); local directory is `~/points-beyond-2`. Same project — see Known Gotchas. Astro 5 rebuild — in progress, not yet deployed.
+**This repo**: GitHub repo is `pb-jwhitlock/points-beyond`; local directory is `~/points-beyond`. Astro 5 rebuild — in progress, not yet deployed.
 
 ## Stack / Architecture
 - **Framework**: Astro 5.x (SSG, static output)
@@ -63,14 +63,14 @@ None identified. The Astro rebuild is functionally equivalent to the live site.
 
 ## Known Gotchas
 - `base: '/'` in `astro.config.mjs` is set for the apex domain — don't change to a subpath
-- **Local directory vs GitHub repo name mismatch**: Local directory is `~/points-beyond-2` but the GitHub repo is `pb-jwhitlock/points-beyond` (no -2 suffix). They are the same project. The `-2` suffix is a leftover local naming choice from when we were uncertain which repo was canonical. Consider renaming the local dir to match: `mv ~/points-beyond-2 ~/points-beyond`.
+- Local directory `~/points-beyond` now matches the GitHub repo name `pb-jwhitlock/points-beyond`. (Was `~/points-beyond-2` historically — resolved this session.)
 - All content is hardcoded in `.astro` files; no CMS or data layer
 - Prototype pages are reachable by URL but not in nav — safe to delete
 
 ## Last Session Summary
-- Inspected repo structure and confirmed this is the Astro rebuild of the live plain-HTML site
-- Confirmed live site (`points-beyond-frontend-1`) is raw HTML served via GitHub Pages + Fastly with no form backend
-- Created CLAUDE.md and `/update-context` command for this repo
+- Created CLAUDE.md and `/update-context` command; confirmed this is the Astro rebuild of the live plain-HTML site
+- Confirmed live site (`points-beyond-frontend-1`) is raw HTML via GitHub Pages + Fastly with no form backend
+- Resolved local directory chaos: repo was nested at `~/points-beyond/points-beyond-2/` due to accidental `mv`; cleaned up to canonical `~/points-beyond/` matching GitHub repo name
 
 ## Next Steps
 1. Decide whether `pb-jwhitlock/points-beyond` (Astro rebuild) is ready to replace the live site — do a side-by-side review

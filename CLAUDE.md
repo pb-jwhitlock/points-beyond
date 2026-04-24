@@ -67,10 +67,12 @@ None identified. The Astro rebuild is functionally equivalent to the live site.
 - All content is hardcoded in `.astro` files; no CMS or data layer
 - Prototype pages are reachable by URL but not in nav — safe to delete
 
-## Last Session Summary
-- Created CLAUDE.md and `/update-context` command; confirmed this is the Astro rebuild of the live plain-HTML site
-- Confirmed live site (`points-beyond-frontend-1`) is raw HTML via GitHub Pages + Fastly with no form backend
-- Resolved local directory chaos: repo was nested at `~/points-beyond/points-beyond-2/` due to accidental `mv`; cleaned up to canonical `~/points-beyond/` matching GitHub repo name
+## Last Session Summary (April 24, 2026)
+- Finalized three-service structure (AI Voice Agents, Reputation Management, AEO+SEO) with real estate as the initial vertical and campaign target
+- Built out full vertical-specific pricing model: reputation management and AEO scale with business size, voice AI scales with call volume; bundle tiers for solo/mid/multi-location
+- Decided public site uses "Starting at" language anchored to real estate rates; higher-complexity clients get custom quotes
+- Active cold outreach campaign in development: personalized Loom + SMS (personal phone for TCPA) + AI demo call; email via GHL
+- CRM plan: Systeme.io free tier now, migrate to GHL ($97/mo) after first paying client
 
 ## Service Positioning & Pricing (decided April 24, 2026)
 
@@ -79,15 +81,39 @@ None identified. The Astro rebuild is functionally equivalent to the live site.
 2. **Reputation Management** — Google reviews
 3. **Answer Engine & Search Optimization** — AEO + SEO bundled
 
-### Pricing (Real Estate Vertical)
-| Service | Setup | Monthly |
+### Pricing by Vertical / Business Size
+
+**AI Voice Agent** — scales with call volume (est. monthly minutes × $0.10 + $200 margin minimum)
+| Vertical | Setup | Monthly |
 |---|---|---|
-| AI Voice Agent | $1,500 | $349/mo |
-| Reputation Management | $750 | $249/mo |
-| AEO Foundation | $2,500 (one-time) | $599/mo retainer (optional) |
-| Bundle (all three) | $3,995 | $797/mo |
+| Real estate (solo/team) | $1,500 | $349/mo |
+| HVAC / plumbing | $1,500 | $599–799/mo |
+| Multi-provider clinic | $1,500 | $799–1,200/mo |
+
+**Reputation Management** — scales with business size
+| Size | Setup | Monthly |
+|---|---|---|
+| Solo / small | $750 | $249/mo |
+| Mid-size | $1,000 | $349/mo |
+| Multi-location | $1,500–2,500 | $499–799/mo |
+
+**AEO Foundation** — scales with content complexity
+| Size | Setup | Monthly retainer (optional) |
+|---|---|---|
+| Solo / single service | $2,500 | $599/mo |
+| Multi-service | $3,500–4,500 | $599/mo |
+| Multi-location | $5,000–7,500 | $599/mo |
+
+**Bundle (all three services)**
+| Size | Setup | Monthly |
+|---|---|---|
+| Solo | $3,995 | $797/mo |
+| Mid-size | $5,500 | $1,199/mo |
+| Multi-location | $7,500–10,000 | $1,599–2,499/mo |
 
 **Early adopter offer**: First 5 clients get 40% off setup in exchange for case study + testimonial.
+
+**Public site pricing**: Use "Starting at" language — real estate rates are the published floor; higher-complexity clients get custom quotes.
 
 ### Active Campaign (in development)
 Cold outreach to mid-tier Northern VA real estate agents via personalized Loom video + SMS + AI demo call workflow.
@@ -100,7 +126,8 @@ Considering Systeme.io free tier vs. GHL ($97/mo) for own agency CRM and email a
 - Use Systeme.io until then
 
 ## Next Steps
-1. Set up Formspree on contact form (both repos) — fixes silent lead loss
-2. Content parity audit: live HTML site vs. Astro rebuild
-3. Update services page in Astro to reflect three-service structure
-4. Cutover to production (enable Pages, swap custom domain, archive old repo)
+1. **Set up Formspree on contact form** (both repos) — highest priority, fixes silent lead loss before cutover
+2. **Update services page** in Astro to reflect three-service structure + "Starting at" pricing language
+3. **Content parity audit**: compare live HTML site vs. Astro rebuild section by section
+4. **Cutover to production**: enable Pages on `pb-jwhitlock/points-beyond`, swap custom domain, archive `points-beyond-frontend-1`
+5. **CRM**: set up Systeme.io for email automation; revisit GHL after first paying client

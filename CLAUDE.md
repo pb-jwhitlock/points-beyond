@@ -41,6 +41,8 @@ AI content strategy consultancy in Fairfax County, VA — services: AI Voice Age
 - [x] All core pages built, content complete
 - [x] SEO/AEO/Schema markup added
 - [x] GitHub Actions deploy workflow configured (push to main → Astro build → Pages artifact)
+- [x] Content parity audit completed (April 25, 2026) — 16 items identified, 5 are P1 blockers
+- [ ] **P1 blockers not yet fixed** — do not cut over until resolved (see Pre-Cutover Blockers below)
 - [ ] GitHub Pages not enabled on this repo — `pointsbeyond.ai` still serves from `points-beyond-frontend-1`
 - [ ] Prototype pages present but not linked from nav
 - [ ] `index-original.astro` still present for reference
@@ -56,16 +58,50 @@ Push to `main` → GitHub Actions builds Astro → uploads `dist/` → deploys t
 **Current live repo**: `pb-jwhitlock/points-beyond-frontend-1` — raw HTML, legacy build, custom domain `pointsbeyond.ai`.
 
 ## Pre-Cutover Blockers
-None identified. The Astro rebuild is functionally equivalent to the live site.
+**Audit (April 25, 2026) found 16 items; 5 are hard blockers that will break the site or silently lose leads:**
+
+1. **CSS variables undefined** — `--color-card-bg`, `--color-card-border`, `--color-card-hover`, `--color-accent`, `--color-accent-rgb` are used across about/contact/services/payment/privacy pages but not defined in `Layout.astro`. Cards will render broken.
+2. **Payment page broken link** — `href="#REPLACE_WITH_STRIPE_LINK"` in `payment.astro`. Needs real Stripe URL.
+3. **No contact form backend** — Homepage form has `action="#"`. `/contact/` page has no form at all. Leads cannot be captured.
+4. **Footer missing Privacy Policy and Terms links** — Live site footer links to both; `Footer.astro` has neither.
+5. **No `/terms/` page** — Live site footer links to Terms & Conditions; page doesn't exist in this repo.
+
+**High-visibility content gaps (P2) — homepage missing vs live site:**
+- Pain points section ("Every missed call...is lost revenue" — 4 pain points with 80%+ stat)
+- Process/timeline section ("From strategy call to live AI system in 7 days")
+- Testimonials section (3 named testimonials: Michael R., Sarah L., David T.)
+- Inline FAQ on homepage (7+ Q&As)
+- Booking form with service interest checkboxes + SMS consent checkbox
+
+**Messaging/positioning drift (P3):**
+- Homepage H1 differs: live = "Never Miss a Lead. Be the Answer AI Delivers." / Astro = "Strategic content for the AI search era."
+- Brand name inconsistency: live = "Points Beyond AI" / Astro = "Points Beyond" — decide and unify
+- Pricing wrong: live = "$397/mo", `faq.astro` FAQ #4 says "$599", services schema says "599", CLAUDE.md says $349 real estate floor
+- Contact page copy is old federal/IT consulting messaging; has "Federal Clients" section
+- About page overweights TS/SCI clearance and Navy/defense background vs small business AI pivot
+
+**AEO/schema gaps (P4):**
+- FAQPage schema only on `/faq/` — not on homepage where most traffic lands
+- No LocalBusiness schema despite Northern VA local positioning
+- WebSite SearchAction schema on homepage implies a search box that doesn't exist
+
+**Note:** The live site is a **single-page marketing site** — all subpages (/about/, /services/, /contact/, /faq/) return 404. The Astro rebuild introduces multi-page architecture, which is an intentional upgrade but means returning visitors will experience a different UX.
 
 ## Known Issues
-- **Contact form unconnected**: Form has styling but no backend — same state as the live site (confirmed via curl: no `action` attribute, no CRM). Need to choose a CRM (leaning Systeme.io free tier vs. GHL) and add form action. Pre-existing issue, not introduced by cutover.
+- **Contact form unconnected**: Homepage form has `action="#"`. `/contact/` page has no form at all. Need Formspree (or equivalent) before cutover — leads are being lost now.
+- **Privacy page uses undefined CSS variables** (`--color-accent`, `--color-accent-rgb`) — SMS compliance section will render without styling.
 
 ## Known Gotchas
 - `base: '/'` in `astro.config.mjs` is set for the apex domain — don't change to a subpath
 - Local directory `~/points-beyond` now matches the GitHub repo name `pb-jwhitlock/points-beyond`. (Was `~/points-beyond-2` historically — resolved this session.)
 - All content is hardcoded in `.astro` files; no CMS or data layer
 - Prototype pages are reachable by URL but not in nav — safe to delete
+
+## Last Session Summary (April 25, 2026)
+- Decided to do production cutover today, staged with approval at each checkpoint
+- Completed Stage 1: full content parity audit — fetched live site, read all Astro source files, identified 16 pre-cutover items (5 P1 blockers, see Pre-Cutover Blockers above)
+- Key audit finding: live site is a single-page marketing site (all subpages 404); Astro rebuild is multi-page — major structural difference, but intentional upgrade
+- No code changes made this session — audit report delivered, awaiting approval to proceed with fixes
 
 ## Last Session Summary (April 24, 2026)
 - Finalized three-service structure (AI Voice Agents, Reputation Management, AEO+SEO) with real estate as the initial vertical and campaign target
@@ -126,8 +162,35 @@ Considering Systeme.io free tier vs. GHL ($97/mo) for own agency CRM and email a
 - Use Systeme.io until then
 
 ## Next Steps
-1. **Set up Formspree on contact form** (both repos) — highest priority, fixes silent lead loss before cutover
-2. **Update services page** in Astro to reflect three-service structure + "Starting at" pricing language
-3. **Content parity audit**: compare live HTML site vs. Astro rebuild section by section
-4. **Cutover to production**: enable Pages on `pb-jwhitlock/points-beyond`, swap custom domain, archive `points-beyond-frontend-1`
-5. **CRM**: set up Systeme.io for email automation; revisit GHL after first paying client
+Staged cutover in progress — resume at Stage 2 (fixing P1 blockers):
+
+**Stage 2 — Fix P1 blockers (do first, in this order):**
+1. Define missing CSS variables in `Layout.astro` (card-bg, card-border, card-hover, accent, accent-rgb)
+2. Wire up contact form with Formspree — add to both `index.astro` CTA form and build a real form on `contact.astro`
+3. Add Privacy Policy + Terms links to `Footer.astro`
+4. Create `/terms/` page (`terms.astro`) — port from live site footer link text
+5. Decide Stripe link for `payment.astro` (or note it's not linked from nav so lower urgency)
+
+**Stage 3 — Homepage content parity (P2):**
+6. Add pain points section to `index.astro`
+7. Add process/timeline section to `index.astro`
+8. Add testimonials section to `index.astro`
+9. Update homepage H1 to match live site ("Never Miss a Lead. Be the Answer AI Delivers.")
+10. Update homepage form fields to match live (service checkboxes, SMS consent)
+
+**Stage 4 — Messaging cleanup (P3):**
+11. Fix pricing everywhere: $349/mo floor on homepage, FAQ answer, services schema
+12. Decide brand name ("Points Beyond" vs "Points Beyond AI") — update consistently
+13. Rewrite contact page copy — remove IT/federal language
+14. Soften about page federal-first framing
+
+**Stage 5 — Cutover:**
+15. Enable GitHub Pages on `pb-jwhitlock/points-beyond` (Settings → Pages → Source: GitHub Actions)
+16. Set custom domain to `pointsbeyond.ai`
+17. Verify DNS; then disable Pages on `points-beyond-frontend-1`
+
+**Backlog (post-cutover):**
+- Update services page to reflect three-service structure + "Starting at" pricing language
+- Add FAQPage schema to homepage
+- Consider LocalBusiness schema
+- Set up Systeme.io for email automation; revisit GHL after first paying client
